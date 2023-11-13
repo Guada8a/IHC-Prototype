@@ -1,56 +1,146 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css" />
     <title>Prototype</title>
-
-    <!--diseño-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-
-    <!--Bootstrap jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="./css/index.css" />
-
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
-<body>
-    <!--Header-->
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Panel Izquierdo -->
+        <div id="sidebar" class="w-2/12 bg-gray-800 p-4 h-full transition-all duration-300 ease-in-out">
+            <!-- Contenido del panel izquierdo -->
+            <div class="container mx-auto">
+                <!-- Foto de perfil -->
+                <div class="flex justify-center">
+                    <a href="#" class="text-white">
+                        <!-- Imagen -->
+                        <img src="https://picsum.photos/100" class="rounded-full" title="Foto de perfil" />
+                    </a>
+                </div>
+                <!-- Nombre y correo -->
+                <label class="text-white ml-4 justify-center">
+                    <div class="font-bold">Joaquín Guzmán</div>
+                    <div class="text-sm">
+                        <a href="#" class="text-indigo-400">jguzmán@ucol.mx</a>
+                    </div>
+                </label>
+                <!-- Barra de 5 estrellas -->
+                <div class="mt-4 rounded-full bg-white-100">
+                    <div class="flex items-center">
+                        <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                        <label for="star5" class="text-2xl text-yellow-500 cursor-pointer" onclick="setRating(5)">&#9733;</label>
 
-    <div class="row">
-        <!--NAMBAR-->
-        <nav class="navbar navbar-expand-lg navbar-dark text-white col-12 " style="padding-left: 4%;">
+                        <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                        <label for="star4" class="text-2xl text-yellow-500 cursor-pointer" onclick="setRating(4)">&#9733;</label>
 
+                        <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                        <label for="star3" class="text-2xl text-yellow-500 cursor-pointer" onclick="setRating(3)">&#9733;</label>
 
-        </nav>
+                        <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                        <label for="star2" class="text-2xl text-yellow-500 cursor-pointer" onclick="setRating(2)">&#9733;</label>
+
+                        <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                        <label for="star1" class="text-2xl text-yellow-500 cursor-pointer" onclick="setRating(1)">&#9733;</label>
+                    </div>
+                </div>
+                <!-- Apartado de cursos -->
+                <div class="mt-10 mb-10">
+                    <h1 class="text-bold mb-2">
+                        <a href="#" class="text-white">Cursos</a>
+                    </h1>
+                    <div class="backdrop-blur-xl bg-white/30 h-40 rounded-lg text-center align-middle">
+                        <!-- Mensaje sin cursos -->
+                        <h2 class="text-white h-full mt-50">Sin cursos</h2>
+                    </div>
+                </div>
+                <footer class="w-full footer">
+                    <hr class="bg-gradient-to-r from-transparent via-white-100 to-transparent">
+                    <!-- Botones de configuración y salir -->
+                    <button class="mt-4 text-white bg-bottom bg-transparent hover:bg-slate-400 w-full py-2 rounded text-left">
+                        Configuración</button>
+                    <button class="mt-4 text-white bg-bottom bg-red-500 hover:bg-red-600 w-full py-2 rounded">Salir</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="w-11/12" id="principal">
+            <nav class="bg-gradient-to-r from-black via-indigo-700 to-black text-white p-4">
+                <div class="flex justify-between items-center">
+                    <!-- Botón de hamburguesa -->
+                    <div id="menuIcon" class="cursor-pointer text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </div>
+                    <!-- Barra de búsqueda -->
+                    <div class="mr-4 w-3/6">
+                        <input id="blurSearch" type="text" class="rounded-full w-full py-2 text-gray-800 backdrop-blur-xl bg-white/30" placeholder="Buscar..." />
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <a href="#" class="text-white">
+                                <!-- Imagen -->
+                                <img src="./img/logo.png" class="h-10" title="Foto de perfil" />
+                            </a>
+                        </div>
+                        <div class="mr-4">
+                            <a href="#" class="text-white">
+                                <!-- Imagen -->
+                                <img src="https://picsum.photos/40" class="rounded-full" title="Foto de perfil" />
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </nav>
+
+            <!-- Contenido principal de la página -->
+            <div class="container mx-auto w-full">
+                <div class="w-9/12 mt-4">
+                    <div class="container">
+                        <h1 class="font-bold text-4xl">Bienvenido</h1>
+                    </div>
+                </div>
+                <div class="w-3/12">
+                    <!-- Apartado de cursos -->
+                    <div class="mt-10 mb-10">
+                        <div class="container">
+                            <div class="backdrop-blur-xl bg-white/30 h-40 rounded-lg text-center align-middle">
+                                <!-- Mensaje sin cursos -->
+                                <h2 class="h-full mt-50">Sin cursos</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!--Main-->
+    <script>
+        // JavaScript para alternar la visibilidad del panel izquierdo
+        const sidebar = document.getElementById('sidebar');
+        const menuIcon = document.getElementById('menuIcon');
+        const display = document.getElementById('principal');
 
-    <div class="container">
-
-
-
-
-
-
-    </div>
-
-
-
-
-
-
-
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            menuIcon.classList.toggle('rotate-180'); /* Agrega una rotación al botón de hamburguesa */
+            display.classList.toggle('w-full'); /* Ajusta el ancho del contenido principal cuando el panel izquierdo está oculto */
+        });
+        function setRating(rating) {
+            alert('Puntuaste con ' + rating + ' estrella(s)!');
+            // Aquí puedes realizar acciones
+        }
+    </script>
 </body>
-
 </html>

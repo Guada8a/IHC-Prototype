@@ -10,13 +10,51 @@
 
 .navbar {
 	background: #1c6b9c;
-
 }
 
-nav{
-	height:70px;
+nav {
+	height: 70px;
+}
+/* Agrega estilos personalizados aquí si es necesario */
+#sidebar {
+	max-width: 200px; /* Ajusta el ancho máximo del panel izquierdo según tus necesidades */
 }
 
-.perfil{
-	background: #1c6b9c;
+#menuIcon {
+	transition: transform 0.3s ease-in-out; /* Agrega una animación suave al botón de hamburguesa */
+}
+
+#sidebar.hidden {
+	transform: translateX(
+		-100%
+	); /* Mueve el panel izquierdo fuera de la pantalla cuando está oculto */
+}
+
+#blurSearch {
+	border: 1px solid #ccc; /* Añade un borde a la barra de búsqueda */
+	/* Fondo tipo mica */
+    background: rgba(255, 255, 255, 0.1);
+    /* Placeholder blanco */
+    color: #fff;
+    text-align: center;
+}
+
+#blurSearch::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+.custom-hr {
+	border: none; /* Elimina la línea predeterminada */
+	height: 2px; /* Ajusta la altura de la línea */
+	background-color: #757373; /* Color de fondo de la línea */
+	margin: 30px 0; /* Ajusta el espacio antes y después del HR */
+  }
+
+.invisible-hr {
+	border: none; /* Elimina la línea */
+	height: 1px; /* Ajusta la altura deseada para el separador */
+	background-color: transparent; /* Establece el color de fondo transparente */
+	margin: 15px 0; /* Ajusta el espacio antes y después del HR */
+/* Agrega estilos personalizados aquí si es necesario: */
 }

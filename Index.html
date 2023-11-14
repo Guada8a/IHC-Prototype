@@ -30,7 +30,7 @@
                 <label class="text-white ml-4 justify-center">
                     <div class="font-bold">Joaquín Guzmán</div>
                     <div class="text-sm">
-                        <a href="#" class="text-indigo-400">jguzmán@ucol.mx</a>
+                        <a href="#" class="text-indigo-400 correo">jguzmán@ucol.mx</a>
                     </div>
                 </label>
                 <!-- Barra de 5 estrellas -->
@@ -220,6 +220,11 @@
             // Aquí puedes realizar acciones
         }
         $(document).ready(function(){
+            //Jalar user de localstorage
+            var user = localStorage.getItem("user");
+
+            $(".correo").text(user);
+
     //Generar personas
     $.ajax({
         url: 'https://randomuser.me/api/?results=20',

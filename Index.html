@@ -67,7 +67,7 @@
                     <!-- Botones de configuración y salir -->
                     <button class="mt-4 text-white bg-bottom bg-transparent hover:bg-slate-400 w-full py-2 rounded text-left">
                         Configuración</button>
-                    <button class="mt-4 text-white bg-bottom bg-red-500 hover:bg-red-600 w-full py-2 rounded">Salir</button>
+                    <button class="mt-4 text-white bg-bottom bg-red-500 hover:bg-red-600 w-full py-2 rounded salir">Salir</button>
                 </footer>
             </div>
         </div>
@@ -224,6 +224,11 @@
             var user = localStorage.getItem("user");
 
             $(".correo").text(user);
+
+            $(".salir").click(function(){
+                localStorage.clear();
+                window.location.href = "login.html";
+            });
 
     //Generar personas
     $.ajax({

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Prototype</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Panel Izquierdo -->
+        <div id="sidebar" class="w-1/4 md:w-2/12 bg-gray-800 p-4 h-full w-full transition-all duration-300 ease-in-out">
+            <!-- Contenido del panel izquierdo -->
+            <div class="container mx-auto">
+                <!-- Foto de perfil -->
+                <div class="flex justify-center">
+                    <a href="#" class="text-white">
+                        <!-- Imagen -->
+                        <img src="https://picsum.photos/100" class="rounded-full" title="Foto de perfil" />
+                    </a>
+                </div>
+                <!-- Nombre y correo -->
+                <label class="text-white ml-4 justify-center">
+                    <div class="font-bold">User Nuevo</div>
+                    <div class="text-sm">
+                        <a href="#" class="text-indigo-400 correo">jguzmán@ucol.mx</a>
+                    </div>
+                </label>
+                <!-- Barra de 5 estrellas -->
+                <div class="mt-4 rounded-full bg-white-100">
+                    <div class="flex items-center">
+                        <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                        <label for="star5" class="text-2xl text-yellow-500 cursor-pointer"
+                            onclick="setRating(5)">&#9733;</label>
+
+                        <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                        <label for="star4" class="text-2xl text-yellow-500 cursor-pointer"
+                            onclick="setRating(4)">&#9733;</label>
+
+                        <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                        <label for="star3" class="text-2xl text-yellow-500 cursor-pointer"
+                            onclick="setRating(3)">&#9733;</label>
+
+                        <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                        <label for="star2" class="text-2xl text-yellow-500 cursor-pointer"
+                            onclick="setRating(2)">&#9733;</label>
+
+                        <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                        <label for="star1" class="text-2xl text-yellow-500 cursor-pointer"
+                            onclick="setRating(1)">&#9733;</label>
+                    </div>
+                </div>
+                <!-- Apartado de cursos -->
+                <div class="mt-10 mb-10">
+                    <h1 class="text-bold mb-2">
+                        <a href="#" class="text-white">Cursos</a>
+                    </h1>
+                    <div class="backdrop-blur-xl bg-white/30 h-40 rounded-lg text-center align-middle">
+                        <!-- Mensaje sin cursos -->
+                        <h2 class="text-white h-full mt-50">Sin cursos</h2>
+                    </div>
+                </div>
+                <footer class="w-full footer">
+                    <hr class="bg-gradient-to-r from-transparent via-white-100 to-transparent">
+                    <!-- Botones de configuración y salir -->
+                    <button class="mt-4 text-white bg-bottom bg-transparent hover:bg-slate-400 w-full py-2 rounded text-left">
+                        Configuración</button>
+                    <button class="mt-4 text-white bg-bottom bg-red-500 hover:bg-red-600 w-full py-2 rounded salir">Salir</button>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="w-11/12 overflow-y-auto" id="principal">
+            <!-- BARRA DE NAVEGACION -->
+            <nav class="bg-gradient-to-r from-black via-indigo-700 to-black text-white p-4">
+                <div class="flex justify-between items-center">
+                    <!-- Botón de hamburguesa -->
+                    <div id="menuIcon" class="cursor-pointer text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </div>
+                    <!-- Barra de búsqueda -->
+                    <div class="mr-4 w-3/6">
+                        <input id="blurSearch" type="text"
+                            class="rounded-full w-full py-2 text-gray-800 backdrop-blur-xl bg-white/30"
+                            placeholder="Buscar..." />
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <a href="#" class="text-white">
+                                <!-- Imagen -->
+                                <img src="./img/logo.png" class="h-10" title="Foto de perfil" />
+                            </a>
+                        </div>
+                        <div class="mr-4">
+                            <a href="#" class="text-white">
+                                <!-- Imagen -->
+                                <img src="https://picsum.photos/40" class="rounded-full" title="Foto de perfil" />
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Contenido principal de la página -->
+            <div class="container mx-auto w-full mt-4 ">
+                <h1 class="font-bold text-3xl w-full mb-4">Bienvenido, <span class="font-bold text-3xl w-full mb-4 text-teal-500">User Nuevo!</span></h1>
+                <div class="grid grid-cols-5 gap-3">
+                    <!-- CONTENIDO PRINCIPAL -->
+                    <!-- IZQUIERDA -->
+                    <div class="col-span-4">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                                        src="/docs/images/blog/image-4.jpg" alt="">
+                                    <div class="flex flex-col justify-between p-4 leading-normal">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the
+                                            biggest enterprise technology acquisitions of 2021 so far, in reverse
+                                            chronological order.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                                        src="/docs/images/blog/image-4.jpg" alt="">
+                                    <div class="flex flex-col justify-between p-4 leading-normal">
+                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the
+                                            biggest enterprise technology acquisitions of 2021 so far, in reverse
+                                            chronological order.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                                        src="/docs/images/blog/image-4.jpg" alt="">
+                                    <div class="flex flex-col justify-between p-4 leading-normal">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the
+                                            biggest enterprise technology acquisitions of 2021 so far, in reverse
+                                            chronological order.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#"
+                                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+                                        src="/docs/images/blog/image-4.jpg" alt="">
+                                    <div class="flex flex-col justify-between p-4 leading-normal">
+                                        <h5
+                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                            Noteworthy technology acquisitions 2021</h5>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the
+                                            biggest enterprise technology acquisitions of 2021 so far, in reverse
+                                            chronological order.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <h1 class="font-bold text-4xl w-full mt-2 mb-4">M&aacute;s visitado</h1>
+                        <div class="slide">
+                            <div class="slide-inner">
+                                <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
+                                <div class="slide-item">
+                                    <img src="./img/carrousel/c1.jpg">
+                                </div>
+                                <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
+                                <div class="slide-item">
+                                    <img src="./img/carrousel/c4.jpg">
+                                </div>
+                                <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
+                                <div class="slide-item">
+                                    <img src="./img/carrousel/c3.jpg">
+                                </div>
+                                <input class="slide-open" type="radio" id="slide-4" name="slide" aria-hidden="true" hidden="">
+                                <div class="slide-item">
+                                    <img src="./img/carrousel/c2.jpg">
+                                </div>
+                                <label for="slide-4" class="slide-control prev control-1">‹</label>
+                                <label for="slide-3" class="slide-control prev control-1">‹</label>
+                                <label for="slide-2" class="slide-control next control-1">›</label>
+                                <label for="slide-1" class="slide-control prev control-2">‹</label>
+                                <label for="slide-3" class="slide-control next control-2">›</label>
+                                <label for="slide-4" class="slide-control next control-3">›</label>
+                                <label for="slide-3" class="slide-control prev control-4">‹</label>
+                                <label for="slide-2" class="slide-control prev control-4">‹</label>
+                                <label for="slide-1" class="slide-control next control-4">›</label>
+                                <ol class="slide-indicador">
+                                    <li>
+                                        <label for="slide-1" class="slide-circulo">•</label>
+                                    </li>
+                                    <li>
+                                        <label for="slide-2" class="slide-circulo">•</label>
+                                    </li>
+                                    <li>
+                                        <label for="slide-3" class="slide-circulo">•</label>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!--Mis cursos-->
+                        <h1 class="font-bold text-4xl w-full mt-2 mb-4">M&aacute;s Cursos</h1>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
+                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
+                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
+                                    </div>
+                            </div>
+                            <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://escueladeediciondelima.com/wp-content/uploads/2021/07/como-hacer-una-buena-redaccion-en-frances-1020x680-1.jpg">
+                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum dolor.</strong>
+                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto excepturi cupiditate animi nulla veritatis, doloribus sit architecto totam corrupti quae quas aliquid adipisci ab! Harum iure quae totam libero.</span>
+                                    </div>
+                            </div>
+                            <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.sectei.cdmx.gob.mx/storage/app/uploads/public/5f2/223/9d8/5f22239d8095c165538400.jpg">
+                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum dolor.</strong>
+                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto excepturi cupiditate animi nulla veritatis, doloribus sit architecto totam corrupti quae quas aliquid adipisci ab! Harum iure quae totam libero.</span>
+                                    </div>
+                            </div>
+                            <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.vocaeditorial.com/blog/media/como-mejorar-la-comprension-lectora-1175x784.jpeg">
+                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum dolor.</strong>
+                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto excepturi cupiditate animi nulla veritatis, doloribus sit architecto totam corrupti quae quas aliquid adipisci ab! Harum iure quae totam libero.</span>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="mb-4 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-96">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ranking</h5>
+                            <hr>
+                            <p class="font-normal text-gray-700 dark:text-gray-400 mt-2" id="personasRank">
+                            </p>
+                        </a>
+                        <a href="#" class="mt-2 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-auto">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Estadísticas</h5>
+                            <hr>
+                            <img src="./img/Estadisticas.jpg" alt="---">
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Salir
+        $('.salir').on('click', function () {
+            localStorage.removeItem("user");
+            window.location.href = "index.html";
+        });
+        // JavaScript para alternar la visibilidad del panel izquierdo
+        const sidebar = document.getElementById('sidebar');
+        const menuIcon = document.getElementById('menuIcon');
+        const display = document.getElementById('principal');
+
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            menuIcon.classList.toggle('rotate-180'); /* Agrega una rotación al botón de hamburguesa */
+            display.classList.toggle('w-full'); /* Ajusta el ancho del contenido principal cuando el panel izquierdo está oculto */
+        });
+        function setRating(rating) {
+            alert('Puntuaste con ' + rating + ' estrella(s)!');
+            // Aquí puedes realizar acciones
+        }
+        $(document).ready(function () {
+            //Jalar user de localstorage
+            var user = localStorage.getItem("user");
+
+            $(".correo").text(user);
+            function setRating(rating) {
+                alert('Puntuaste con ' + rating + ' estrella(s)!');
+                // Auí puedes realizar acciones
+            }
+            //Generar personas
+            $.ajax({
+                url: 'https://randomuser.me/api/?results=20',
+                dataType: 'json',
+                success: function (data) {
+                    var personas = data.results;
+                    var personasRank = document.getElementById('personasRank');
+
+                    personas.forEach((persona, index) => {
+                        var div = document.createElement('div');
+                        div.setAttribute('class', 'overflow-hidden relative max-w-sm mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-3');
+
+                        var img = document.createElement('img');
+                        img.setAttribute('class', 'absolute -left-6 w-24 h-24 rounded-full shadow-lg');
+                        img.setAttribute('src', persona.picture.thumbnail);
+                        img.setAttribute('alt', 'Contact Person');
+
+                        var divContent = document.createElement('div');
+                        divContent.setAttribute('class', 'flex flex-col py-5 pl-24');
+
+                        var strong = document.createElement('strong');
+                        strong.setAttribute('class', 'text-slate-900 text-sm font-medium dark:text-slate-200');
+                        strong.textContent = `${persona.name.first} ${persona.name.last}`;
+
+                        var span = document.createElement('span');
+                        span.setAttribute('class', 'text-slate-500 text-sm font-medium dark:text-slate-400');
+                        span.textContent = 'Technical advisor'; // Puedes cambiar este texto según tus necesidades
+
+                        divContent.appendChild(strong);
+                        divContent.appendChild(span);
+
+                        div.appendChild(img);
+                        div.appendChild(divContent);
+
+                        personasRank.appendChild(div);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

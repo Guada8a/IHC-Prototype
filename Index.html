@@ -83,7 +83,8 @@
         </div>
 
         <!-- Contenido Principal -->
-        <div class="w-11/12" id="principal">
+        <div class="w-11/12 overflow-y-auto" id="principal">
+            <!-- BARRA DE NAVEGACION -->
             <nav class="bg-gradient-to-r from-black via-indigo-700 to-black text-white p-4">
                 <div class="flex justify-between items-center">
                     <!-- Botón de hamburguesa -->
@@ -120,14 +121,14 @@
 
             <!-- Contenido principal de la página -->
             <div class="container mx-auto w-full mt-4">
-                <h1 class="font-bold text-3xl w-full mb-4">Bienvenido, <span
-                        class="font-bold text-3xl w-full mb-4 text-teal-500">Joaquín Guzmán!</span></h1>
+                <h1 class="font-bold text-3xl w-full mb-4">Bienvenido, <span class="font-bold text-3xl w-full mb-4 text-teal-500">Joaquín Guzmán!</span></h1>
                 <div class="grid grid-cols-5 gap-3">
+                    <!-- CONTENIDO PRINCIPAL -->
+                    <!-- IZQUIERDA -->
                     <div class="col-span-4">
                         <div class="grid grid-cols-2 gap-2">
                             <div>
-                                <a href="#"
-                                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                                         src="/docs/images/blog/image-4.jpg" alt="">
                                     <div class="flex flex-col justify-between p-4 leading-normal">
@@ -141,13 +142,11 @@
                                 </a>
                             </div>
                             <div>
-                                <a href="#"
-                                    class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
                                         src="/docs/images/blog/image-4.jpg" alt="">
                                     <div class="flex flex-col justify-between p-4 leading-normal">
-                                        <h5
-                                            class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                                             Noteworthy technology acquisitions 2021</h5>
                                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the
                                             biggest enterprise technology acquisitions of 2021 so far, in reverse
@@ -186,11 +185,7 @@
                                 </a>
                             </div>
                         </div>
-
-                        <hr class="invisible-hr">
-
                         <h1 class="font-bold text-4xl w-full mt-2 mb-4">M&aacute;s visitado</h1>
-
                         <div id="default-carousel" class="relative w-full" data-carousel="slide">
                             <!-- Carousel wrapper -->
                             <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -254,86 +249,72 @@
                             </button>
                         </div>
 
-                        <hr class="invisible-hr">
-
                         <h1 class="font-bold text-4xl w-full mt-2 mb-4">M&aacute;s Cursos</h1>
                         <div class="grid grid-cols-2 gap-2">
-                                <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-                                    <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
-                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
-                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
-                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
-                                    </div>
-                                </div>
-                            
-                                <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-                                    <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
-                                    <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
-                                        <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum dolor.</strong>
-                                        <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto excepturi cupiditate animi nulla veritatis, doloribus sit architecto totam corrupti quae quas aliquid adipisci ab! Harum iure quae totam libero.</span>
-                                    </div>
-                                </div>
-                        </div>
-
-                        <hr class="invisible-hr">
-
-                        <div class="grid grid-cols-2 gap-2">
-                            <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                            <div class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-2">
                                 <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
                                 <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
                                     <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
                                     <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
                                 </div>
                             </div>
-                        
-                            <div style="width: 100%; height: 100%;" class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+                            <div class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-2">
                                 <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
                                 <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
-                                    <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum dolor.</strong>
-                                    <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam iusto excepturi cupiditate animi nulla veritatis, doloribus sit architecto totam corrupti quae quas aliquid adipisci ab! Harum iure quae totam libero.</span>
+                                    <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
+                                    <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
                                 </div>
                             </div>
+                            <div class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-2">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
+                                <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                    <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
+                                    <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
+                                </div>
+                            </div>
+                            <div class="hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer overflow-hidden relative max-w-xl bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-2">
+                                <img class="rounded-xl absolute -left-9 shadow-lg" style="height: 100%; width: 40%;" src="https://www.lacasaencendida.es/storage/15063/responsive-images/xclub-de-lectura-de-la-tarde___detail_937_527.jpg.pagespeed.ic.ehOGgTvhZQ.webp">
+                                <div class="flex flex-col py-8 pl-24" style="padding-left: 40%;">
+                                    <strong class="text-slate-900 text-lg font-medium dark:text-slate-200">Lorem, ipsum.</strong>
+                                    <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis porro eligendi vitae ipsum, distinctio rem vel, vero veniam aliquid sint nobis ducimus impedit nam itaque?
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                
-
-
-                    <hr class="invisible-hr">
-
-
-                    </div>
-                    <a href="#"
-                        class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-60">
+                    <!-- RANKING -->
+                    <!-- DERECHA -->
+                    <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-60">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ranking</h5>
                         <hr>
                         <p class="font-normal text-gray-700 dark:text-gray-400 mt-2" id="personasRank">
-
                         </p>
                     </a>
                 </div>
             </div>
         </div>
+
     </div>
 
-
-
-
     <script>
+        // JavaScript para alternar la visibilidad del panel izquierdo
+        const sidebar = document.getElementById('sidebar');
+        const menuIcon = document.getElementById('menuIcon');
+        const display = document.getElementById('principal');
 
+        menuIcon.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            menuIcon.classList.toggle('rotate-180'); /* Agrega una rotación al botón de hamburguesa */
+            display.classList.toggle('w-full'); /* Ajusta el ancho del contenido principal cuando el panel izquierdo está oculto */
+        });
+        function setRating(rating) {
+            alert('Puntuaste con ' + rating + ' estrella(s)!');
+            // Aquí puedes realizar acciones
+        }
+        $(document).ready(function(){
+            //Jalar user de localstorage
+            var user = localStorage.getItem("user");
 
-        /*
-                // Abre el panel izquierdo cuando el usuario llega al principio de la página
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY === 0) { // Si el usuario está en la parte superior de la página
-                        sidebar.classList.remove('hidden');
-                        menuIcon.classList.add('rotate-180');
-                        display.classList.add('w-full');
-                    } else { // Si el usuario ha desplazado la página hacia abajo
-                        sidebar.classList.add('hidden');
-                        menuIcon.classList.remove('rotate-180');
-                        display.classList.remove('w-full');
-                    }
-                });*/
+            $(".correo").text(user);
 
         // JavaScript para alternar la visibilidad del panel izquierdo
         const sidebar = document.getElementById('sidebar');
@@ -389,14 +370,46 @@
                 }
             });
         });
+    //Generar personas
+    $.ajax({
+        url: 'https://randomuser.me/api/?results=20',
+        dataType: 'json',
+        success: function(data) {
+            var personas = data.results;
+            var personasRank = document.getElementById('personasRank');
 
-
-
+            personas.forEach((persona, index) => {
+                var div = document.createElement('div');
+                div.setAttribute('class', 'overflow-hidden relative max-w-sm mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-3');
+            
+                var img = document.createElement('img');
+                img.setAttribute('class', 'absolute -left-6 w-24 h-24 rounded-full shadow-lg');
+                img.setAttribute('src', persona.picture.thumbnail);
+                img.setAttribute('alt', 'Contact Person');
+            
+                var divContent = document.createElement('div');
+                divContent.setAttribute('class', 'flex flex-col py-5 pl-24');
+            
+                var strong = document.createElement('strong');
+                strong.setAttribute('class', 'text-slate-900 text-sm font-medium dark:text-slate-200');
+                strong.textContent = `${persona.name.first} ${persona.name.last}`;
+            
+                var span = document.createElement('span');
+                span.setAttribute('class', 'text-slate-500 text-sm font-medium dark:text-slate-400');
+                span.textContent = 'Technical advisor'; // Puedes cambiar este texto según tus necesidades
+            
+                divContent.appendChild(strong);
+                divContent.appendChild(span);
+            
+                div.appendChild(img);
+                div.appendChild(divContent);
+            
+                personasRank.appendChild(div);
+            });
+        }
+    });
+});
 
     </script>
-
-
-
 </body>
-
 </html>

@@ -44,3 +44,17 @@ nav {
     text-align: center;
 }
 
+.custom-hr {
+	border: none; /* Elimina la línea predeterminada */
+	height: 2px; /* Ajusta la altura de la línea */
+	background-color: #757373; /* Color de fondo de la línea */
+	margin: 30px 0; /* Ajusta el espacio antes y después del HR */
+  }
+
+.invisible-hr {
+	border: none; /* Elimina la línea */
+	height: 1px; /* Ajusta la altura deseada para el separador */
+	background-color: transparent; /* Establece el color de fondo transparente */
+	margin: 15px 0; /* Ajusta el espacio antes y después del HR */
+/* Agrega estilos personalizados aquí si es necesario: */
+}

@@ -33,7 +33,7 @@
                 <label class="text-white ml-4 justify-center">
                     <div class="font-bold">Joaquín Guzmán</div>
                     <div class="text-sm">
-                        <a href="#" class="text-indigo-400">jguzmán@ucol.mx</a>
+                        <a href="#" class="text-indigo-400 correo">jguzmán@ucol.mx</a>
                     </div>
                 </label>
                 <!-- Barra de 5 estrellas -->
@@ -283,12 +283,21 @@
                     </div>
                     <!-- RANKING -->
                     <!-- DERECHA -->
-                    <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-60">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ranking</h5>
-                        <hr>
-                        <p class="font-normal text-gray-700 dark:text-gray-400 mt-2" id="personasRank">
-                        </p>
-                    </a>
+                    <div>
+                        <a href="#" class="block max-w-sm p-6 mb-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700  overflow-y-auto h-96">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Ranking</h5>
+                            <hr>
+                            <p class="font-normal text-gray-700 dark:text-gray-400 mt-2" id="personasRank">
+                            </p>
+                        </a>
+                        <a href="#" class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow overflow-y-auto h-80">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Estadísticas</h5>
+                            <hr>
+                            <p class="font-normal text-gray-700 dark:text-gray-400 mt-2">
+                                <img src="./img/Estadisticas.jpg" alt="Estadisticas" title="Estadisticas">
+                            </p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -310,27 +319,15 @@
             alert('Puntuaste con ' + rating + ' estrella(s)!');
             // Aquí puedes realizar acciones
         }
-        $(document).ready(function(){
+        $(document).ready(function () {
             //Jalar user de localstorage
             var user = localStorage.getItem("user");
 
             $(".correo").text(user);
-
-        // JavaScript para alternar la visibilidad del panel izquierdo
-        const sidebar = document.getElementById('sidebar');
-        const menuIcon = document.getElementById('menuIcon');
-        const display = document.getElementById('principal');
-
-        menuIcon.addEventListener('click', () => {
-            sidebar.classList.toggle('hidden');
-            menuIcon.classList.toggle('rotate-180'); /* Agrega una rotación al botón de hamburguesa */
-            display.classList.toggle('w-full'); /* Ajusta el ancho del contenido principal cuando el panel izquierdo está oculto */
-        });
-        function setRating(rating) {
-            alert('Puntuaste con ' + rating + ' estrella(s)!');
-            // Aquí puedes realizar acciones
-        }
-        $(document).ready(function () {
+            function setRating(rating) {
+                alert('Puntuaste con ' + rating + ' estrella(s)!');
+                // Auí puedes realizar acciones
+            }
             //Generar personas
             $.ajax({
                 url: 'https://randomuser.me/api/?results=20',
@@ -370,46 +367,6 @@
                 }
             });
         });
-    //Generar personas
-    $.ajax({
-        url: 'https://randomuser.me/api/?results=20',
-        dataType: 'json',
-        success: function(data) {
-            var personas = data.results;
-            var personasRank = document.getElementById('personasRank');
-
-            personas.forEach((persona, index) => {
-                var div = document.createElement('div');
-                div.setAttribute('class', 'overflow-hidden relative max-w-sm mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5 mb-3');
-            
-                var img = document.createElement('img');
-                img.setAttribute('class', 'absolute -left-6 w-24 h-24 rounded-full shadow-lg');
-                img.setAttribute('src', persona.picture.thumbnail);
-                img.setAttribute('alt', 'Contact Person');
-            
-                var divContent = document.createElement('div');
-                divContent.setAttribute('class', 'flex flex-col py-5 pl-24');
-            
-                var strong = document.createElement('strong');
-                strong.setAttribute('class', 'text-slate-900 text-sm font-medium dark:text-slate-200');
-                strong.textContent = `${persona.name.first} ${persona.name.last}`;
-            
-                var span = document.createElement('span');
-                span.setAttribute('class', 'text-slate-500 text-sm font-medium dark:text-slate-400');
-                span.textContent = 'Technical advisor'; // Puedes cambiar este texto según tus necesidades
-            
-                divContent.appendChild(strong);
-                divContent.appendChild(span);
-            
-                div.appendChild(img);
-                div.appendChild(divContent);
-            
-                personasRank.appendChild(div);
-            });
-        }
-    });
-});
-
     </script>
 </body>
 </html>
